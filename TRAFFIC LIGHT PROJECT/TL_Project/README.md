@@ -9,6 +9,7 @@ Develop a realistic traffic light control system.
  Use an Arduino as μC
  Map the state machine model to code (via switch state pattern)
 **
+
 **TL02**
 **Extend the (car) traffic light system of the first sprint by a pedestrian light
  Extend a button for the pedestrian. If pressed, the pedestrian lights switches as fast as possible to

@@ -24,3 +24,9 @@ Model your solution
  A pedestrian button
  Green and red light for the pedestrian light.
 **
+
+**Realize the pedestrian light in concurrent to the traffic
+light
+ Update your solution on model level in form of using concurrent
+regions
+**

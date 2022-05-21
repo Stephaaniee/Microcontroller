@@ -1,0 +1,44 @@
+// C++ code
+//
+int i = 0;
+
+int buttonState2 = 0;
+
+int buttonState1 = 0;
+
+int stronglyTaken = 0;
+
+int stronglyNotTaken = 1;
+
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(5, INPUT);
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  Serial.begin(9600);
+
+}
+
+void loop()
+{
+  buttonState1 = digitalRead(2);
+  buttonState2 = digitalRead(5);
+  if (digitalRead(2) == LOW && digitalRead(5) == LOW) {
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    Serial.println(stronglyNotTaken);
+  }
+  if (digitalRead(2) == LOW && digitalRead(5) == HIGH) {
+    digitalWrite(12, HIGH);
+  }
+  if (digitalRead(2) == HIGH && digitalRead(5) == LOW) {
+    digitalWrite(13, HIGH);
+  }
+  if (digitalRead(2) == HIGH && digitalRead(5) == HIGH) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    Serial.println(stronglyTaken);
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}

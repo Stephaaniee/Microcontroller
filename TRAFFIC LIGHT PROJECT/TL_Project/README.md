@@ -31,3 +31,22 @@ light
  Update your solution on model level in form of using concurrent
 regions
 **
+
+**TL04**
+** Develop an interface for the traffic light systems (TLS)
+ The coordination between the traffic lights should consider at least two
+different traffic light systems
+ Nevertheless, the coordination should be realized in a way that the traffic lights
+can be exchanged
+ Example: you are 3 teammates (A, B, C) with three different TLS
+ The following coordination should be possible:
+ A with A
+ A with B
+ A with C
+ B with C
+ First, update your state machine model
+ The interface can be represented by an appropriate event (e.g. signalizing switching to a specific state (e.g. redStateEvent) of (two) different state machines
+ Run the TLS in parallel (You have different possibilities)
+ Via different Arduino instances that connected via an appropriate serial interface (UART, I2C, …)
+ Extra: Via a network connection (TCP/UDP) via a standard C/C++ implementation (plus 5 points in addition)
+ Update your code accordingly**
